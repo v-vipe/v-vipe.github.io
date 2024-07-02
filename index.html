@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="WayEx: Waypoint exploration using a Single Demonstration">
+  <meta name="keywords" content="wayex, WayEx, waypoint-exploration">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WayEx</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">WayEx: Waypoint exploration using a Single Demonstration </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://mlevy2525.github.io/">Mara Levy</a>, </span>
+            <span class="author-block">
+              <a href="https://www.cs.umd.edu/~nirat/">Nirat Saini</a>,</span>
+            <span class="author-block">
+              <a href="http://www.cs.umd.edu/~abhinav/">Abhinav Shrivastava</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of Maryland, College Park</span>
+            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="index.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span> 
+                  </a>
+                  -->
+            </div>
+          </div>
+           <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+                  <span class="link-block">
+                    <a href="paper.pdf"
+                       class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+
+          </div>
+           <!-- <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="publication-video">
+                <video id="teaser" autoplay muted loop playsinline height="100%" controls>
+                    <source src="./static/videos/trailer_dataset1_final.mp4"
+                            type="video/mp4">
+                  </video>
+              </div>
+
+            </div> </div>-->
+
+    <section class="section">
+    <!--/ Abstract. -->
+    
+
+              <div class="container is-max-desktop">
+                <h2 class="title is-3">Project Video</h2>
+                <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/WayEx_HighQuality.mp4"
+                      type="video/mp4">
+            </video>
+                </a>
+              </div>
+          
+          <!-- <div class="subtitle has-text-centered">
+      <h2 class="title is-4">
+        Video coming soon
+      </h2> </div> -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+  <section class="section">
+    <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose WayEx, a new method for learning complex goal-conditioned robotics tasks from a single demonstration. Our approach distinguishes itself from existing imitation learning methods by demanding fewer expert examples and eliminating the need for information about the actions taken during the demonstration. This is accomplished by introducing a new reward function and employing a knowledge expansion technique. We demonstrate the effectiveness of WayEx, our waypoint exploration strategy, across six diverse tasks, showcasing its applicability in various environments. Notably, our method significantly reduces training time by 50% as compared to traditional reinforcement learning methods. WayEx  obtains a higher reward than existing imitation learning methods given only a single demonstration. Furthermore, we demonstrate its success in tackling complex environments where standard approaches fall short.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <img src="./static/images/waypoint_teaser.jpg"/>
+      </div>
+    </div>
+    </section>
+
+<hr>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Proximal Waypoints</h2> 
+    <div class="content has-text-justified">
+          <p>
+            We will use the provided demonstration during training by locating waypoints that are "proximal" to our current state. Two points are considered "proximal" if they fall within a given distance of each other.
+            The two points in the image on the left are considered proximal while the two points on the right are not.
+          </p>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-half-width">
+        <img src="./static/images/proximal_waypoint.jpg"/>
+      </div>
+      <div class="column is-half-width">
+        <img src="./static/images/non_proximal_waypoint.jpg"/>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+  <hr>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Proximal Reward Function</h2> 
+    <div class="content has-text-justified">
+          <p>
+            Once we have determined if two points are proximal we can use this information to find the reward for each state during training. 
+            We model this reward off a sparse reward. If we assume that if the reward is 0 at the last frame of the expert trajectory and -1 at all other frames we can compute the pseudo ground truth reward for each frame and apply this reward to all proximal waypoints.
+            If the two points are proximal and the waypoint is at step t in an episode of length l the reward is as follows.
+          </p>
+
+    </div>
+
+    <div class="columns is-centered">
+      <img src="./static/images/proximal_reward.png"/>
+    </div>
+
+    <p>
+      If the two points are not proximal and l max represents the maximum possible length of a demonstration than the reward is as follows.
+    </p>
+
+    <div class="columns is-centered">
+      <img src="./static/images/not_proximal_reward.png"/>
+    </div>
+  </div>
+
+</section>
+
+  <hr>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Expansion</h2> 
+    <div class="content has-text-justified">
+          <p>
+            When the first part of training is done the policy will have learned how to trace the expert trajectory.
+          </p>
+    </div>
+
+    <div class="columns is-centered">
+      <img src="./static/images/traced_policy.jpg"/>
+    </div>
+
+    <div class="content has-text-justified">
+          <p>
+            From here we want to expand the policy to cover a larger range of start and end states. We do this by applying increasing amounts of noise to the start and goal state so long as the success rate stays high.
+          </p>
+    </div>
+
+    <div class="columns is-centered">
+      <img src="./static/images/small_expanded_policy.jpg"/>
+    </div>
+
+    <div class="content has-text-justified">
+          <p>
+            While the first expansion is small eventually we will be able to cover the full range of start and goal states.
+          </p>
+    </div>
+
+    <div class="columns is-centered">
+      <img src="./static/images/large_expanded_policy.jpg"/>
+    </div>
+
+
+
+
+</section>
+  
+<hr>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Results</h2>
+    <div class="content has-text-justified">
+      </div>
+
+     <div class="columns is-centered">
+      <div class="column is-full-width">
+        <img src="./static/images/lift_web.jpg"/>
+      </div>
+    </div>
+    
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <img src="./static/images/door_rs_web.jpg"/>
+      </div>
+    </div>
+    
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+
+        <img src="./static/images/door_web.jpg"/>
+        
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <img src="./static/images/insertion_web.jpg"/>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <img src="./static/images/assembly_web.jpg"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+          <p>
+            Credits for this awesome template goes to <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
