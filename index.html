@@ -158,27 +158,46 @@ Learning to represent three dimensional (3D) human pose given a two dimensional 
     </section>
 
 <hr>
-<!-- <section class="section">
+<section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Proximal Waypoints</h2> 
+    <h2 class="title is-3">Model Overview</h2> 
     <div class="content has-text-justified">
           <p>
-            We will use the provided demonstration during training by locating waypoints that are "proximal" to our current state. Two points are considered "proximal" if they fall within a given distance of each other.
-            The two points in the image on the left are considered proximal while the two points on the right are not.
+            V-Vipe has 3 components. A data processing step in which any rotation information is removed fro the 3D representation. A 3D Pose Encoder/Decoder as well as a 2D Pose Encoder.
           </p>
     </div>
 
     <div class="columns is-centered">
-      <div class="column is-half-width">
-        <img src="./static/images/proximal_waypoint.jpg"/>
-      </div>
-      <div class="column is-half-width">
-        <img src="./static/images/non_proximal_waypoint.jpg"/>
-      </div>
+      <img src="./static/images/full_network.jpg"/>
     </div>
   </div>
+</section>
 
-</section> -->
+<hr>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Data Processing</h2> 
+    <div class="content has-text-justified">
+          <p>
+            In typical 3D pose estimation work the pose is found in camera space. However as, seen in the image below a pose taken from different viewpoints can be very different, even when represented in 3D.
+          </p>
+
+          <div class="columns is-centered">
+            <img src="./static/images/many_camera.jpg"/>
+          </div>
+
+          <p>In order to compare poses from different view points we remove any rotation from the original pose and train only on 3D poses that are aligned to each plane.</p>
+
+          <div class="columns is-centered">
+            <img src="./static/images/rotated.jpg"/>
+          </div>
+    </div>
+
+    <div class="columns is-centered">
+      <img src="./static/images/full_network.jpg"/>
+    </div>
+  </div>
+</section>
 
 <!--   <hr> -->
 <!-- <section class="section">
