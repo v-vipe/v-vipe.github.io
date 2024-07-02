@@ -201,6 +201,27 @@ Learning to represent three dimensional (3D) human pose given a two dimensional 
   </div>
 </section>
 
+<hr>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Pose Retrieval</h2> 
+    <div class="content has-text-justified">
+          <p>
+            Using the 2D Embedder described above we can find the embeddings for many 2D poses from different camera view points and query any pose to find the most similar pose from another view point.
+            Following prior work we evaluate how often our model finds a similar pose by looking at the hit metric. Because our model has generative capabilities we find that it generalizes better to unseen poses as well as unseen camera viewpoints.
+          </p>
+    </div>
+
+    <div class="columns is-centered">
+      <img src="./static/images/retrieved.jpg"/>
+    </div>
+
+    <div class="columns is-centered">
+      <img src="./static/images/retrieval_table.png"/>
+    </div>
+  </div>
+</section>
+
 <!--   <hr> -->
 <!-- <section class="section">
   <div class="container is-max-desktop">
