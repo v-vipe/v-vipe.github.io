@@ -160,22 +160,6 @@ Learning to represent three dimensional (3D) human pose given a two dimensional 
 <hr>
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Model Overview</h2> 
-    <div class="content has-text-justified">
-          <p>
-            V-Vipe has 3 components. A data processing step in which any rotation information is removed fro the 3D representation. A 3D Pose Encoder/Decoder as well as a 2D Pose Encoder.
-          </p>
-    </div>
-
-    <div class="columns is-centered">
-      <img src="./static/images/full_network.jpg"/>
-    </div>
-  </div>
-</section>
-
-<hr>
-<section class="section">
-  <div class="container is-max-desktop">
     <h2 class="title is-3">Data Processing</h2> 
     <div class="content has-text-justified">
           <p>
@@ -191,6 +175,24 @@ Learning to represent three dimensional (3D) human pose given a two dimensional 
           <div class="columns is-centered">
             <img src="./static/images/rotated.jpg"/>
           </div>
+    </div>
+
+    <div class="columns is-centered">
+      <img src="./static/images/full_network.jpg"/>
+    </div>
+  </div>
+</section>
+
+<hr>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Model Overview</h2> 
+    <div class="content has-text-justified">
+          <p>
+            V-Vipe has 3 components. A data processing step in which any rotation information is removed fro the 3D representation as described above. 
+            Next a 3D Encoder and Decoder are trained as a Variational Auto Encoder. In addition to the VAE losses a triplet loss is added which pushes similar poses close together in the embedding space.
+            Finally a 2D Encoder is trained to map 2D poses to the embedding space defined above.
+          </p>
     </div>
 
     <div class="columns is-centered">
