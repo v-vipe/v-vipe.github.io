@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="WayEx: Waypoint exploration using a Single Demonstration">
+        content="V-VIPE: Variational View Invariant Pose Embedding">
   <meta name="keywords" content="wayex, WayEx, waypoint-exploration">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WayEx</title>
+  <title>V-VIPE</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -53,12 +53,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">WayEx: Waypoint exploration using a Single Demonstration </h1>
+          <h1 class="title is-1 publication-title">V-VIPE: Variational View Invariant Pose Embedding </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://mlevy2525.github.io/">Mara Levy</a>, </span>
-            <span class="author-block">
-              <a href="https://www.cs.umd.edu/~nirat/">Nirat Saini</a>,</span>
             <span class="author-block">
               <a href="http://www.cs.umd.edu/~abhinav/">Abhinav Shrivastava</a>
             </span>
@@ -118,7 +116,7 @@
 
             </div> </div>-->
 
-    <section class="section">
+<!--     <section class="section">
     <!--/ Abstract. -->
     
 
@@ -140,7 +138,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <hr>
   <section class="section">
     <div class="container is-max-desktop">
@@ -150,8 +148,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We propose WayEx, a new method for learning complex goal-conditioned robotics tasks from a single demonstration. Our approach distinguishes itself from existing imitation learning methods by demanding fewer expert examples and eliminating the need for information about the actions taken during the demonstration. This is accomplished by introducing a new reward function and employing a knowledge expansion technique. We demonstrate the effectiveness of WayEx, our waypoint exploration strategy, across six diverse tasks, showcasing its applicability in various environments. Notably, our method significantly reduces training time by 50% as compared to traditional reinforcement learning methods. WayEx  obtains a higher reward than existing imitation learning methods given only a single demonstration. Furthermore, we demonstrate its success in tackling complex environments where standard approaches fall short.
-          </p>
+Learning to represent three dimensional (3D) human pose given a two dimensional (2D) image of a person, is a challenging problem. In order to make the problem less ambiguous it has become common practice to estimate 3D pose in the camera coordinate space. However, this makes the task of comparing two 3D poses difficult. In this paper, we address this challenge by separating the problem of estimating 3D pose from 2D images into two steps. We use a variational autoencoder (VAE) to find an embedding that represents 3D poses in canonical coordinate space. We refer to this embedding as variational view-invariant pose embedding (V-VIPE). Using V-VIPE we can encode 2D and 3D poses and use the embedding for downstream tasks, like retrieval and classification. We can estimate 3D poses from these embeddings using the decoder as well as generate unseen 3D poses. The variability of our encoding allows it to generalize well to unseen camera views when mapping from 2D space. To the best of our knowledge, V-VIPE is the only representation to offer this diversity of applications.          </p>
         </div>
       </div>
     </div>
@@ -163,7 +160,7 @@
     </section>
 
 <hr>
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Proximal Waypoints</h2> 
     <div class="content has-text-justified">
@@ -183,10 +180,10 @@
     </div>
   </div>
 
-</section>
+</section> -->
 
-  <hr>
-<section class="section">
+<!--   <hr> -->
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Proximal Reward Function</h2> 
     <div class="content has-text-justified">
@@ -211,9 +208,9 @@
     </div>
   </div>
 
-</section>
+</section> -->
 
-  <hr>
+<!--   <hr>
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Expansion</h2> 
@@ -250,9 +247,9 @@
 
 
 
-</section>
+</section> -->
   
-<hr>
+<!-- <hr>
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Results</h2>
@@ -291,7 +288,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <footer class="footer">
   <div class="container">
